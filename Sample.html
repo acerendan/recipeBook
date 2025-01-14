@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background with Mini Images</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('Chef.png') center center / cover no-repeat; /* Center background */
+        }
+        .sides {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .sides::before,
+        .sides::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px; /* Width of side area */
+            background-image: url('Rat.png'); /* Mini image */
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+        .sides::before {
+            left: 0;
+        }
+        .sides::after {
+            right: 0;
+            transform: scaleX(-1);
+                }
+    </style>
+</head>
+<body>
+    <div class="sides"></div>
+    <h1 style="text-align: center; margin: 100px 0;">Page with Mini Images on Sides</h1>
+</body>
+</html>

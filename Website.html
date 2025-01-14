@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Binangkal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('Chef.png') center center / cover no-repeat;
+        }
+
+        /* Side mini images */
+        .sides {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: -1; /* Keep behind the main content */
+        }
+        .sides::before,
+        .sides::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px; /* Width of side area */
+            background-image: url('Rat.png'); /* Mini image */
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+        .sides::before {
+            left: 0; /* Left side */
+    
+        }
+        .sides::after {
+            right: 0; /* Right side */
+            transform: scaleX(-1);
+        }
+
+        /* Header styling */
+        header {
+            background-color: #ffcc66;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            color: #5a3e1b;
+            margin: 0;
+        }
+
+        /* Section styling */
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative; /* Ensure sections stay on top */
+            z-index: 1; /* Place above side images */
+        }
+        h2 {
+            color: #5a3e1b;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: square;
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #ffcc66;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1; /* Keep above the side images */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sides"></div>
+
+    <header>
+        <h1>It's Binangkal Time!</h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups all-purpose flour</li>
+            <li>1/4 Cup cornstarch</li>
+            <li>3/4 Cup white sugar</li>
+            <li>1/4 teaspoon Salt</li>
+            <li>1 teaspoon baking powder</li>
+            <li>2 tablespoons salted butter (melted)</li>
+            <li>1 large egg</li>
+            <li>1/2 Cup evaporated milk</li>
+            <li>1/2 Cup sesame seeds</li>
+            <li>1/4 teaspoon vanilla (Optional)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Combine all dry ingredients in a bowl: flour, cornstarch, sugar, salt, and baking powder. Mix well.</li>
+            <li>In a separate bowl mix together milk, melted butter, and egg. Mix well.</li>
+            <li>Slowly add the dry ingredients into the wet mixture. Mix well to form a dough.</li>
+            <li>Scoop a tablespoon mixture to form a ball and roll it into the sesame seeds.</li>
+            <li>Prepare oil in a pan for deep frying. Make sure the oil is hot before putting the dough.</li>
+            <li>Deep fry until golden brown.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Image</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Binangkal_%28sesame_seed_doughnuts%29.jpg/1200px-Binangkal_%28sesame_seed_doughnuts%29.jpg" alt="Binangkalz">
+    </section>
+
+    <footer>
+        &copy; 2025 My Recipe Page
+    </footer>
+
+</body>
+</html>
